@@ -1,0 +1,139 @@
+
+######ISSUE SLOT VALUES#########
+
+Number of Function Units known : 34
+
+
+Function Unit: 0 name : 'bru'
+Function Unit: 1 name : 'aru'
+Function Unit: 2 name : 'shu'
+Function Unit: 3 name : 'psu'
+Function Unit: 4 name : 'lsu'
+Function Unit: 5 name : 'seu'
+Function Unit: 6 name : 'lgu'
+Function Unit: 7 name : 'mul'
+Function Unit: 8 name : 'sru'
+Function Unit: 9 name : 'fu_hud0'
+Function Unit: 10 name : 'suu'
+Function Unit: 11 name : 'mux'
+Function Unit: 12 name : 'cmacfft'
+Function Unit: 13 name : 'caru'
+Function Unit: 14 name : 'cdemap'
+Function Unit: 15 name : 'fu_hud1'
+Function Unit: 16 name : 'cshu'
+Function Unit: 17 name : 'cshf'
+Function Unit: 18 name : 'agu_lut'
+Function Unit: 19 name : 'lfsr'
+Function Unit: 20 name : 'myMAC'
+Function Unit: 21 name : 'bmu'
+Function Unit: 22 name : 'varu'
+Function Unit: 23 name : 'vlgu'
+Function Unit: 24 name : 'flgu'
+Function Unit: 25 name : 'vmul'
+Function Unit: 26 name : 'vpsu'
+Function Unit: 27 name : 'fpsu'
+Function Unit: 28 name : 'vsalsu'
+Function Unit: 29 name : 'vshu'
+Function Unit: 30 name : 'vintr'
+Function Unit: 31 name : 'vtransp'
+Function Unit: 32 name : 'mac'
+Function Unit: 33 name : 'vslice'
+
+Function Unit : 0 and pipelined stage : 0 %pub_Active Power = 5.56767E-05 Area per bit = 34.7857
+Function Unit : 1 and pipelined stage : 0 %pub_Active Power = 0.000132562 Area per bit = 82.8125
+Function Unit : 2 and pipelined stage : 0 %pub_Active Power = 5.42755E-05 Area per bit = 33.90625
+Function Unit : 3 and pipelined stage : 0 %pub_Active Power = 7.04081E-06 Area per bit = 4.3984375
+Function Unit : 4 and pipelined stage : 1 %pub_Active Power = 1.76E-04 Area per bit = 109.7291667
+Function Unit : 4 and pipelined stage : 2 %pub_Active Power = 1.25E-04 Area per bit = 77.9375
+Function Unit : 4 and pipelined stage : 3 %pub_Active Power = 2.76E-04 Area per bit = 172.1953125
+Function Unit : 5 and pipelined stage : 0 %pub_Active Power = 2.51618E-05 Area per bit = 15.71875
+Function Unit : 6 and pipelined stage : 0 %pub_Active Power = 2.55287E-05 Area per bit = 15.94791667
+Function Unit : 7 and pipelined stage : 1 %pub_Active Power = 0.00034066 Area per bit = 212.8125
+Function Unit : 8 and pipelined stage : 0 %pub_Active Power = 7.6536E-06 Area per bit = 4.78125
+Function Unit : 9 and pipelined stage : 0 %pub_Active Power = 1.26559E-05 Area per bit = 7.90625
+Function Unit : 10 and pipelined stage : 0 %pub_Active Power = 7.29146E-06 Area per bit = 4.5555
+Function Unit : 11 and pipelined stage : 0 %pub_Active Power = 1.74749E-05 Area per bit = 10.91666667
+Function Unit : 12 and pipelined stage : 2 %pub_Active Power = 0.001644423 Area per bit = 1027.28125
+Function Unit : 13 and pipelined stage : 0 %pub_Active Power = 0.000115679 Area per bit = 72.265625
+Function Unit : 14 and pipelined stage : 2 %pub_Active Power = 0.000756155 Area per bit = 472.375
+Function Unit : 15 and pipelined stage : 0 %pub_Active Power = 4.21698E-05 Area per bit = 26.34375
+Function Unit : 16 and pipelined stage : 0 %pub_Active Power = 0.000253894 Area per bit = 158.609375
+Function Unit : 17 and pipelined stage : 2 %pub_Active Power = 0.000274404 Area per bit = 171.421875
+Function Unit : 18 and pipelined stage : 2 %pub_Active Power = 0.000885641 Area per bit = 553.265625
+Function Unit : 19 and pipelined stage : 0 %pub_Active Power = 2.36111E-05 Area per bit = 14.75
+Function Unit : 20 and pipelined stage : 0 %pub_Active Power = 0.0 Area per bit = 0.0
+Function Unit : 21 and pipelined stage : 0 %pub_Active Power = 0.0 Area per bit = 0.0
+Function Unit : 22 and pipelined stage : 0 %pub_Active Power = 0.000132562 Area per bit = 82.8125
+Function Unit : 23 and pipelined stage : 0 %pub_Active Power = 2.55287E-05 Area per bit = 15.94791667
+Function Unit : 24 and pipelined stage : 0 %pub_Active Power = 2.55287E-05 Area per bit = 15.94791667
+Function Unit : 25 and pipelined stage : 1 %pub_Active Power = 0.00034066 Area per bit = 212.8125
+Function Unit : 26 and pipelined stage : 0 %pub_Active Power = 7.04081E-06 Area per bit = 4.3984375
+Function Unit : 27 and pipelined stage : 0 %pub_Active Power = 7.04081E-06 Area per bit = 4.3984375
+Function Unit : 28 and pipelined stage : 1 %pub_Active Power = 1.76E-04 Area per bit = 109.7291667
+Function Unit : 28 and pipelined stage : 2 %pub_Active Power = 1.25E-04 Area per bit = 77.9375
+Function Unit : 28 and pipelined stage : 3 %pub_Active Power = 2.76E-04 Area per bit = 172.1953125
+Function Unit : 29 and pipelined stage : 0 %pub_Active Power = 5.42755E-05 Area per bit = 33.90625
+Function Unit : 30 and pipelined stage : 2 %pub_Active Power = 0.0 Area per bit = 0.0
+Function Unit : 31 and pipelined stage : 0 %pub_Active Power = 7.04081E-06 Area per bit = 4.3984375
+Function Unit : 32 and pipelined stage : 1 %pub_Active Power = 0.00034066 Area per bit = 212.8125
+Function Unit : 33 and pipelined stage : 0 %pub_Active Power = 7.04081E-06 Area per bit = 4.3984375
+
+Average Residual Power per Function Unit per um2 : 7.22154E-09 ##########
+
+
+Additional Residual Power per Issue Slot : 0.00289301 #############
+
+
+
+#########REGISTER FILE VALUES#######
+
+Average area per bit Register File : 14.57412997
+
+%pub_Active Power per port Register File : 2.23787E-05 ##########
+
+
+########LOGIC MEMORY VALUES#######
+
+Area per bit Data Memory : 1.43358
+
+Average Residual Power Data Memory per bit : 8.77078E-11
+
+Power Data Memory 1 access per bit : 8.98642E-08  ###########
+
+
+Area per bit Program Memory : 1.390403
+
+%pub Program Memory : 0.000474476
+
+
+
+Area per bit Fifo : 23.7656
+
+Average Residual Power Fifo per bit : 9.79072E-07
+
+
+Area per bit External Master Interface : 3.06231E-07
+
+Average Residual Power External Master Interface per bit : 2.56528E-14
+
+
+
+Average %pu per um2 1 access Register File : 8.44729E-07
+
+
+
+########OTHERS VALUES#########
+
+Power Clock Tree per um2 : 1.12508E-07
+
+Power Sequencer : 0.00106075
+
+Power Result Select Network per port : 0.00039267
+
+Power Decoder per bit : 2.08422E-05
+
+
+
+
+
+
