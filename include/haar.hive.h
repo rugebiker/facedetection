@@ -1,5 +1,5 @@
-#ifndef __HAAR_H__
-#define __HAAR_H__
+#ifndef _haar_hive_h
+#define _haar_hive_h
 
 #include <stdio.h>
 #include<stdlib.h>
@@ -10,6 +10,7 @@
 
 typedef  int sumtype;
 typedef int sqsumtype;
+extern int size;
 
 typedef struct MyPoint
 {
@@ -18,14 +19,14 @@ typedef struct MyPoint
 }
 MyPoint;
 
-typedef struct
+typedef extern struct
 {
     int width;
     int height;
 }
 MySize;
 
-struct MyRect
+struct extern MyRect
 {
     int x;
     int y;
@@ -44,7 +45,7 @@ typedef struct
 MyRectLabeled;
 
 
-typedef struct myCascade
+typedef extern struct myCascade
 {
 // number of stages (22)
     int  n_stages;
@@ -84,5 +85,5 @@ int runCascadeClassifier( myCascade* _cascade, MyPoint pt, int *tree_thresh_arra
 void readTextClassifier();//(myCascade* cascade);
 void releaseTextClassifier();
 
-int detectObjects( MyImage* image, MySize minSize, MySize maxSize, myCascade* cascade, float scale_factor, int min_neighbors, struct MyRect **allCandidates);
+extern void detectObjects(void);
 #endif

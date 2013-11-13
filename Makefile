@@ -12,7 +12,7 @@ HOST_CFLAGS = -W -Wall
 #hive_CPP = cpp -D__HIVECC
 
 faceDetection_CELL = pearl
-faceDetection_FILES = src/utilities.c src/haar.hive.c
+faceDetection_FILES = src/haar.hive.c
 faceDetection_OUT = haar.hive
 faceDetection_CFLAGS = -html
 
