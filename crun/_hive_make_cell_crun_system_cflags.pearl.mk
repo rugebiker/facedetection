@@ -1,0 +1,2 @@
+_CRUN_SYSTEM_CFLAGS = \
+-m32

@@ -35,7 +35,7 @@
 #include "../include/haar.hive.h"
 #include "../include/image.h"
 #include <stdio.h>
-#include <utilities.h>
+#include "../include/utilities.h"
 
 #define MAXWIDTH 1300
 
@@ -59,7 +59,7 @@ void setImageForCascadeClassifier( myCascade* _cascade, MyIntImage* _sum, MyIntI
     struct MyRect equRect;
     struct MyRect tr;
     cascade->sum = *sum;
-    cascade->sqsum = *sqsum;"
+    cascade->sqsum = *sqsum;
 
     equRect.x = equRect.y = 1;
     equRect.width = ((cascade->orig_window_size.width-2));
@@ -278,10 +278,26 @@ void addRect(struct MyRect **rectArray, struct MyRect *rect)
     }
 }
 
+MyImage myimage;
+MySize mysize[2];
+myCascade mycascade;
+float scalefactor;
+int minneighbours;
+struct MyRect myrect;
+
 extern void detectObjects(void) ENTRY
 {
     const float GROUP_EPS = 0.45f;
-    MyImage *img = _img;
+//    MyImage *img = _img;
+
+    MyImage img = myimage;
+    MySize minSize = mysize[0];
+    MySize maxSize = mysize[1];
+    myCascade cascade = mycascade;
+    float scaleFactor = scalefactor;
+    int minNeighbors = minneighbours;
+    struct MyRect allCandidates = myrect;
+
     MyImage image1Obj;
     MyIntImage sum1Obj;
     MyIntImage sqsum1Obj;
@@ -297,16 +313,16 @@ extern void detectObjects(void) ENTRY
 
     if( maxSize.height == 0 || maxSize.width == 0 )
     {
-        maxSize.height = img->height;
-        maxSize.width = img->width;
+        maxSize.height = img.height;
+        maxSize.width = img.width;
     }
 
     // window size of the training set
-    MySize winSize0 = cascade->orig_window_size;
+    MySize winSize0 = cascade.orig_window_size;
     
-    createImage(img->width, img->height, img1);
-    createSumImage(img->width, img->height, sum1);
-    createSumImage(img->width, img->height, sqsum1);
+    createImage(img.width, img.height, img1);
+    createSumImage(img.width, img.height, sum1);
+    createSumImage(img.width, img.height, sqsum1);
 
     factor = 1;
 
@@ -321,9 +337,9 @@ extern void detectObjects(void) ENTRY
 
         // size of the image scaled down (from bigger to smaller)
 
-        MySize sz = { ( (int)(img->width/factor) ), ( (int)(img->height/factor) ) };
+        MySize sz = { ( (int)(img.width/factor) ), ( (int)(img.height/factor) ) };
 
-        cascade->real_window_size = sz;
+        cascade.real_window_size = sz;
 
         // difference between sizes of the scaled image and the original detection window
         MySize sz1 = { sz.width - winSize0.width, sz.height - winSize0.height };
@@ -349,8 +365,8 @@ extern void detectObjects(void) ENTRY
         nearestNeighbor(img, img1);
 
         myIntegral(img1, sum1, sqsum1);
-        setImageForCascadeClassifier( cascade, sum1, sqsum1, cascade->stages_array, cascade->rectangles_array, cascade->scaled_rectangles_array);
-        ScaleImage_Invoker(cascade, factor, sum1->height, sum1->width, allCandidates, &indexCount, cascade->tree_thresh_array, cascade->scaled_rectangles_array, cascade->weights_array, cascade->alpha1_array, cascade->alpha2_array, cascade->stages_array, cascade->stages_thresh_array);
+        setImageForCascadeClassifier( cascade, sum1, sqsum1, cascade.stages_array, cascade.rectangles_array, cascade.scaled_rectangles_array);
+        ScaleImage_Invoker(cascade, factor, sum1.height, sum1.width, allCandidates, &indexCount, cascade.tree_thresh_array, cascade.scaled_rectangles_array, cascade.weights_array, cascade.alpha1_array, cascade.alpha2_array, cascade.stages_array, cascade.stages_thresh_array);
     }
 
     /*if( minNeighbors > 0)

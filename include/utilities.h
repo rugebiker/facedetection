@@ -1,4 +1,4 @@
-#include <haar.h>
+#include "haar.hive.h"
 
 #define  IMIN(a, b)  ((a) ^ (((a)^(b)) & (((a) < (b)) - 1)))
 #define  IMAX(a, b)  ((a) ^ (((a)^(b)) & (((a) > (b)) - 1)))

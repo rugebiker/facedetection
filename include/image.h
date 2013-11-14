@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef extern struct 
+typedef struct
 {
 	int width;
 	int height;

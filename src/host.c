@@ -220,13 +220,13 @@ int hrt_main (int argc, char **argv)
     //Load the program 
     hrt_cell_load_program_id(CELL, haar);
 
-    hrt_indexed_store(CELL, MyImage, args, 0, image);
-    hrt_indexed_store(CELL, MySize, args, 1, minSize);
-    hrt_indexed_store(CELL, MySize, args, 2, maxSize);
-    hrt_indexed_store(CELL, myCascade, args, 3, cascade);
-    hrt_indexed_store(CELL, float, args, 4, scaleFactor);
-    hrt_indexed_store(CELL, int, args, 5, minNeighbours); 
-    hrt_indexed_store(CELL, MyRect, args, 6, result); 
+    hrt_scalar_store(CELL, MyImage, myimage, image);
+    hrt_indexed_store(CELL, MySize, mysize, 0, minSize);
+    hrt_indexed_store(CELL, MySize, mysize, 1, maxSize);
+    hrt_scalar_store(CELL, myCascade, mycascade, cascade);
+    hrt_scalar_store(CELL, float, scalefactor, scaleFactor);
+    hrt_scalar_store(CELL, int, minneighbours, minNeighbours); 
+    hrt_scalar_store(CELL, MyRect, myrect, result); 
 
     printf("-- detecting faces --\r\n");
     

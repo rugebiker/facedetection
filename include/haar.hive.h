@@ -3,14 +3,14 @@
 
 #include <stdio.h>
 #include<stdlib.h>
-#include<image.h>
+#include "image.h"
 
 #define MAXLABELS 50
 #define NUM 300
 
 typedef  int sumtype;
 typedef int sqsumtype;
-extern int size;
+int size;
 
 typedef struct MyPoint
 {
@@ -19,14 +19,14 @@ typedef struct MyPoint
 }
 MyPoint;
 
-typedef extern struct
+typedef struct
 {
     int width;
     int height;
 }
 MySize;
 
-struct extern MyRect
+struct MyRect
 {
     int x;
     int y;
@@ -45,7 +45,7 @@ typedef struct
 MyRectLabeled;
 
 
-typedef extern struct myCascade
+typedef struct myCascade
 {
 // number of stages (22)
     int  n_stages;
@@ -85,5 +85,5 @@ int runCascadeClassifier( myCascade* _cascade, MyPoint pt, int *tree_thresh_arra
 void readTextClassifier();//(myCascade* cascade);
 void releaseTextClassifier();
 
-extern void detectObjects(void);
+void detectObjects(void);
 #endif
